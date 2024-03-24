@@ -1,0 +1,32 @@
+/* Style du titre */
+h1 {
+    color: blue; /* Couleur du titre */
+  }
+  
+  /* Style des sections */
+  section {
+    margin: 20px; /* Marges autour des sections */
+    background-color: #f0f0f0; /* Couleur de fond des sections */
+  }
+  
+  /* Style de la liste des messages */
+  ul {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime les marges intérieures */
+  }
+  
+  /* Style des messages individuels */
+  li {
+    padding: 10px; /* Espacement autour des messages */
+  }
+  
+  /* Style du textarea */
+  textarea {
+    margin: 10px; /* Marge autour du textarea */
+  }
+  
+  /* Style du bouton */
+  button {
+    margin: 10px; /* Marge autour du bouton */
+  }
+  

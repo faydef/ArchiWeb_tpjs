@@ -21,7 +21,7 @@ function fact(n) {
     var messageContent = document.getElementById("message").value;
   
     if (messageContent.trim()) {
-      fetch(`https://8002b0cc-9234-410e-a3fd-b0f7589793ea-00-3ey7y0qxm4uww.picard.replit.dev/msg/post/${encodeURIComponent(messageContent)}`, {
+      fetch(`https://archiweb-tpjs-back.onrender.com/msg/post/${encodeURIComponent(messageContent)}`, {
         method: 'GET'
       })
         .then(response => response.json())
@@ -38,7 +38,7 @@ function fact(n) {
   });
   
   function refreshMessages() {
-    fetch('https://8002b0cc-9234-410e-a3fd-b0f7589793ea-00-3ey7y0qxm4uww.picard.replit.dev/msg/getAll')
+    fetch('https://archiweb-tpjs-back.onrender.com/msg/getAll')
       .then(response => response.json())
       .then(messages => {
         update(messages.map(message => ({ msg: message })));
@@ -47,7 +47,7 @@ function fact(n) {
   }
   
   function update(messages) {
-    fetch('https://8002b0cc-9234-410e-a3fd-b0f7589793ea-00-3ey7y0qxm4uww.picard.replit.dev/msg/likes')
+    fetch('https://archiweb-tpjs-back.onrender.com/msg/likes')
       .then(response => response.json())
       .then(likes => {
         var messageList = document.getElementById("message-list");
@@ -68,7 +68,7 @@ function fact(n) {
   }
   
   function likeMessage(msgId) {
-    fetch(`https://8002b0cc-9234-410e-a3fd-b0f7589793ea-00-3ey7y0qxm4uww.picard.replit.dev/msg/like/${msgId}`, {
+    fetch(`https://archiweb-tpjs-back.onrender.com/msg/like/${msgId}`, {
       method: 'GET'
     })
       .then(response => response.json())
